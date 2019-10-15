@@ -15,7 +15,8 @@ class Transfer
   end
   
   def execute_transaction(amount)
-    sender.
+    sender.withdraw(amount)
+    receiver.deposit(amount)
   end
   
 end
