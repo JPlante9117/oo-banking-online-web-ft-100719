@@ -18,7 +18,6 @@ class Transfer
     if @sender.balance < @amount
       "Transaction rejected. Please check your account balance."
     end
-    end
     if @status == "pending"
       @sender.withdraw(@amount)
       @receiver.deposit(@amount)
