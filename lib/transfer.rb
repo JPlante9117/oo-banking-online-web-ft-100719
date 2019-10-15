@@ -14,13 +14,9 @@ class Transfer
     sender.valid? && receiver.valid? ? true : false
   end
   
-  # def execute_transaction(amount)
-  #   sender.withdraw(amount)
-  #   receiver.deposit(amount)
-  # end
-  
-  def execute_transaction
-    @status = "success"
+  def execute_transaction(amount)
+    sender.withdraw(amount)
+    receiver.deposit(amount)
   end
   
 end
