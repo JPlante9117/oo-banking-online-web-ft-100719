@@ -17,7 +17,7 @@ class Transfer
   def execute_transaction
     @sender.withdraw(@amount)
     @receiver.deposit(@amount)
-    @status = "approved"
+    @status = "complete"
   end
   
 end
