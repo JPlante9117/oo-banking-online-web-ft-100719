@@ -19,14 +19,14 @@ class Transfer
   def execute_transaction
     #binding.pry
     unless @sender.balance < @amount || @sender.valid? == false
-      "Transaction rejected. Please check your account balance."
-      @status = "rejected"
-    else
       if @status == "pending"
         @sender.withdraw(@amount)
         @receiver.deposit(@amount)
         @status = "complete"
       end
+    else
+      "Transaction rejected. Please check your account balance."
+      @status = "rejected"
     end
   end
   
