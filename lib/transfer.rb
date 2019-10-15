@@ -17,8 +17,8 @@ class Transfer
   end
   
   def execute_transaction
+    binding.pry
     if @sender.balance < @amount
-      binding.pry
       "Transaction rejected. Please check your account balance."
     else
       if @status == "pending"
